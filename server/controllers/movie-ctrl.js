@@ -1,16 +1,16 @@
-const Mobile = require('../models/mobile-model')
+const Movie = require('../models/movie-model')
 
-createMobile= (req, res) => {
+createMovie = (req, res) => {
     const body = req.body
 
     if (!body) {
         return res.status(400).json({
             success: false,
-            error: 'You must provide a Mobile',
+            error: 'You must provide a movie',
         })
     }
 
-    const mobile = new Mobile(body)
+    const movie = new Movie(body)
 
     if (!movie) {
         return res.status(400).json({ success: false, error: err })
