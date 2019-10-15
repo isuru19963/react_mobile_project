@@ -36,6 +36,8 @@ componentDidMount = async () => {
     render() {
       const { mobiles, isLoading } = this.state
       console.log('TCL: MobileList -> render -> mobiles', mobiles)
+
+    
         
 
   
@@ -96,27 +98,28 @@ componentDidMount = async () => {
     </MDBCarouselInner>
   </MDBCarousel>
   </MDBContainer>
-        
-
-        <MDBContainer>
-         <MDBRow>
-            <MDBCol size="4" >
-            <MDBCard wide ecommerce>
-              <MDBCardImage cascade className="img-fluid" src="https://i.dailymail.co.uk/1s/2019/09/24/18/18881744-7499677-image-a-4_1569346801238.jpg"  top waves />
-              <MDBCardBody>
-                <MDBCardTitle>ff</MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make
-                  up the bulk of the card&apos;s content.
-                </MDBCardText>
-                <MDBBtn href="#">MDBBtn</MDBBtn>
-              </MDBCardBody>
-            </MDBCard>
-            </MDBCol>
-            </MDBRow>
-
-          </MDBContainer>
-          </Wrapper>
+  <MDBContainer>
+      <h1 className="text-center">Mobile Phone List</h1>
+    </MDBContainer>
+  <MDBContainer>
+  <MDBRow>{this.state.mobiles.map((mobiles) => (
+  <MDBCol size="4">
+  
+      <MDBCard style={{ width: "22rem" }}>
+        <MDBCardImage className="img-fluid" src={mobiles.image_url} waves />
+        <MDBCardBody>
+          <MDBCardTitle>{mobiles.name}</MDBCardTitle>
+          <MDBCardText>
+          Rs:{mobiles.price}
+          </MDBCardText>
+          <MDBBtn href="#">Add To Cart</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+      
+    </MDBCol> ))}
+  </MDBRow>
+  </MDBContainer>
+</Wrapper>
        
         )
     }
