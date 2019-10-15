@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class MoviesInsert extends Component {
+class MobileInsert extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class MoviesInsert extends Component {
     }
 }
 
-export default MoviesInsert
+export default MobileInsert

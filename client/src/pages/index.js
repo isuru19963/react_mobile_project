@@ -1,5 +1,5 @@
-import MoviesList from './MoviesList'
-import MoviesInsert from './MoviesInsert'
-import MoviesUpdate from './MoviesUpdate'
+import MobileList from './MobileList'
+import MobileInsert from './MobileInsert'
+import MobileUpdate from './MoviesUpdate'
 
-export { MoviesList, MoviesInsert, MoviesUpdate }
+export { MobileList, MobileInsert, MobileUpdate }

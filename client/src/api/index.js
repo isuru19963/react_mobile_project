@@ -4,18 +4,18 @@ const api = axios.create({
     baseURL: 'http://localhost:3000/api',
 })
 
-export const insertMovie = payload => api.post(`/movie`, payload)
-export const getAllMovies = () => api.get(`/movies`)
-export const updateMovieById = (id, payload) => api.put(`/movie/${id}`, payload)
-export const deleteMovieById = id => api.delete(`/movie/${id}`)
-export const getMovieById = id => api.get(`/movie/${id}`)
+export const insertMobile = payload => api.post(`/mobile`, payload)
+export const getAllMobile = () => api.get(`/mobile`)
+export const updateMobileById = (id, payload) => api.put(`/mobile/${id}`, payload)
+export const deleteMobileById = id => api.delete(`/mobile/${id}`)
+export const getMobileById = id => api.get(`/mobile/${id}`)
 
 const apis = {
-    insertMovie,
-    getAllMovies,
-    updateMovieById,
-    deleteMovieById,
-    getMovieById,
+    insertMobile,
+    getAllMobile,
+    updateMobileById,
+    deleteMobileById,
+    getMobileById,
 }
 
 export default apis
