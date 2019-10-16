@@ -57,10 +57,10 @@ componentDidMount = async () => {
         <MDBView>
           <img
             className="d-block w-100"
-            src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+            src="https://www.spigen.co.uk/media/catalog/category/category_banner_ipxs_xr.jpg"
             alt="First slide"
           />
-        <MDBMask overlay="black-light" />
+        <MDBMask overlay="black-slight" />
         </MDBView>
         <MDBCarouselCaption>
           <h3 className="h3-responsive">Light mask</h3>
@@ -71,10 +71,10 @@ componentDidMount = async () => {
         <MDBView>
           <img
             className="d-block w-100"
-            src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+            src="http://www.jackys.com/samsung/uploads/home/note_9.jpg"
             alt="Second slide"
           />
-        <MDBMask overlay="black-strong" />
+        <MDBMask overlay="black-slight" />
         </MDBView>
         <MDBCarouselCaption>
           <h3 className="h3-responsive">Strong mask</h3>
@@ -85,7 +85,7 @@ componentDidMount = async () => {
         <MDBView>
           <img
             className="d-block w-100"
-            src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+            src="https://www.mobilephonesdirect.co.uk/assets/img/resources/apple-iphone11-pro-brand-page-banner.jpg"
             alt="Third slide"
           />
         <MDBMask overlay="black-slight" />
