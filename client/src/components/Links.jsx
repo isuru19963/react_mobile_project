@@ -34,7 +34,7 @@ class Links extends Component {
                             </Link>
                         </Item>
                         <Item>
-                            <Link to="/create" className="nav-link">
+                            <Link to="/cart" className="nav-link">
                                 Cart
                             </Link>
                         </Item>

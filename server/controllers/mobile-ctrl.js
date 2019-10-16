@@ -120,6 +120,21 @@ getMobiles = async (req, res) => {
         return res.status(200).json({ success: true, data: mobile })
     }).catch(err => console.log(err))
 }
+createMobileCart= (req, res) => {
+    let products = [], id = null;
+  let cart = JSON.parse(req.body.cart);
+  if (!cart) return res.json(products)
+  for (var i = 0; i < data.products.length; i++) {
+    id = data.products[i].id.toString();
+    if (cart.hasOwnProperty(id)) {
+      data.products[i].qty = cart[id]
+      products.push(data.products[i]);
+    }
+  }
+  return res.json(products);
+}
+
+
 
 module.exports = {
     createMobile,
@@ -127,4 +142,5 @@ module.exports = {
     deleteMobile,
     getMobiles,
     getMobileById,
+    createMobileCart,
 }

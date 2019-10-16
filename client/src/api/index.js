@@ -9,6 +9,8 @@ export const getAllMobile = () => api.get(`/mobile`)
 export const updateMobileById = (id, payload) => api.put(`/mobile/${id}`, payload)
 export const deleteMobileById = id => api.delete(`/mobile/${id}`)
 export const getMobileById = id => api.get(`/mobile/${id}`)
+export const createMobileCart = payload => api.post(`/mobile`, payload)
+
 
 const apis = {
     insertMobile,
@@ -16,6 +18,7 @@ const apis = {
     updateMobileById,
     deleteMobileById,
     getMobileById,
+    createMobileCart
 }
 
 export default apis
