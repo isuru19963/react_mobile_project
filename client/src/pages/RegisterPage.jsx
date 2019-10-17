@@ -1,7 +1,19 @@
-import React from "react";
+import React, { Component } from 'react'
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
 
-const RegPage = () => {
+class RegPage extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name:'',
+      email : '',
+      password: ''
+    };
+  }  
+
+
+
+    render(){
   return (
     <MDBContainer>
       <MDBRow>
@@ -29,7 +41,7 @@ const RegPage = () => {
                     error="wrong"
                     success="right"
                   />
-                  <MDBInput
+                  {/* <MDBInput
                     label="Confirm your email"
                     icon="exclamation-triangle"
                     group
@@ -37,7 +49,7 @@ const RegPage = () => {
                     validate
                     error="wrong"
                     success="right"
-                  />
+                  /> */}
                   <MDBInput
                     label="Your password"
                     icon="lock"
@@ -58,6 +70,7 @@ const RegPage = () => {
       </MDBRow>
     </MDBContainer>
   );
+    }
 };
 
 export default RegPage;
