@@ -6,6 +6,11 @@ const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const User = require('./models/login-model');
 const withAuth = require('./middleware/login-middleware');
+const db = require('./server/db/index');
+
+const Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
+const users = require('./routes/users');
 
 const app = express();
 
@@ -15,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-const mongo_uri = 'mongodb://127.0.0.1:27017/mobileCartDB';
+const mongo_uri = 'mongodb://localhost/mobileCartDB.mobiles';
 mongoose.connect(mongo_uri, { useNewUrlParser: true }, function(err) {
   if (err) {
     throw err;
@@ -25,18 +30,12 @@ mongoose.connect(mongo_uri, { useNewUrlParser: true }, function(err) {
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use('/api/users', users);
 
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-app.get('/api/home', function(req, res) {
-  res.send('Welcome!');
-});
-
-app.get('/api/secret', withAuth, function(req, res) {
-  res.send('The password is potato');
 });
 
 app.post('/api/register', function(req, res) {
@@ -95,4 +94,6 @@ app.get('/checkToken', withAuth, function(req, res) {
   res.sendStatus(200);
 });
 
-app.listen(process.env.PORT || 8080);
+const port = process.env.PORT || 3000;
+// app.listen(process.env.PORT || 3000);
+app.listen(port, () => console.log(`Listening on port ${port}...`));
