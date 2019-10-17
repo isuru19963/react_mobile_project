@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { NavBar } from '../components'
-import { MobileList, MobileInsert, MobileUpdate } from '../pages/index'
+import { MobileList, MobileInsert, MobileUpdate,FormPage } from '../pages/index'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -18,6 +18,7 @@ function App() {
                     exact
                     component={MobileUpdate}
                 />
+                <Route path="/api/login" exact component={FormPage} />
             </Switch>
         </Router>
     )
