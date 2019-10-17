@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // import styled from 'styled-components'
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
 
-
+// import { RegPage } from '../pages/index'
 class FormPage extends Component{
 
     constructor(props) {
@@ -128,7 +128,7 @@ class FormPage extends Component{
             <MDBModalFooter className="mx-5 pt-3 mb-1">
               <p className="font-small grey-text d-flex justify-content-end">
                 Not a member?
-                <a href="RegPage" className="blue-text ml-1">
+                <a href="./RegPage" className="blue-text ml-1">
 
                   Sign Up
                 </a>
