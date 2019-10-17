@@ -38,7 +38,6 @@ const CancelButton = styled.a.attrs({
 class MobilesInsert extends Component {
     constructor(props) {
         super(props)
-
         this.state = {
             name: '',
             brand:'',
