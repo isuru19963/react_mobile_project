@@ -38,6 +38,11 @@ class Links extends Component {
                                 Cart
                             </Link>
                         </Item>
+                        <Item>
+                            <Link to="/api/login" className="nav-link">
+                                LogIn
+                            </Link>
+                        </Item>
                     </List>
                 </Collapse>
             </React.Fragment>
